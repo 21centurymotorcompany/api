@@ -22,7 +22,7 @@ Node.js:
 const api = require('./memo.json')
 const fetch = require('node-fetch')
 // Fetch Bitquery from Github
-fetch("https://21centurymotorcompany.github.io/api").then(function(api) {
+fetch("https://21centurymotorcompany.github.io/api/endpoint/memo.json").then(function(api) {
   // Fetch the actual API via Bitquery
   fetch(api.prod.memo.post).then(function(res) {
     return res.json()
@@ -38,7 +38,7 @@ Browser:
 <html>
 <script>
 // Fetch Bitquery from Github
-fetch("https://21centurymotorcompany.github.io/api").then(function(api) {
+fetch("https://21centurymotorcompany.github.io/api/endpoint/memo.json").then(function(api) {
   // Fetch the actual API via Bitquery
   fetch(api.prod.memo.post).then(function(res) {
     return res.json()
@@ -58,7 +58,7 @@ Because the API contains both the raw query as well as the base64 compiled, you 
 <html>
 <script>
 // Fetch Bitquery from Github
-fetch("https://21centurymotorcompany.github.io/api").then(function(api) {
+fetch("https://21centurymotorcompany.github.io/api/endpoint/memo.json").then(function(api) {
   // Fetch the actual API via Bitquery
   var compiled = btoa(JSON.stringify(api.dev.memo.post));
   var is_authentic = (compiled === api.prod.memo.post);
